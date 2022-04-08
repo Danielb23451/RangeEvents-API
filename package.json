@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Danielb23451/RangeEvents-API.git"
+    "url": "git+https://github.com/RangeEvents/RangeEvents-API.git"
   },
   "keywords": [
     "rangeevents",
@@ -19,7 +19,7 @@
   "author": "Danielb",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Danielb23451/RangeEvents-API/issues"
+    "url": "https://github.com/RangeEvents/RangeEvents-API/issues"
   },
-  "homepage": "https://github.com/Danielb23451/RangeEvents-API#readme"
+  "homepage": "https://github.com/RangeEvents/RangeEvents-API#readme"
 }
