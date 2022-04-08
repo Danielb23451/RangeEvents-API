@@ -1,0 +1,25 @@
+{
+  "name": "rangeevents-api",
+  "version": "1.0.0",
+  "description": "public package for the public bot \"RangeEvents\". feel free to use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danielb23451/RangeEvents-API.git"
+  },
+  "keywords": [
+    "rangeevents",
+    "giveaways",
+    "invites",
+    "events"
+  ],
+  "author": "Danielb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danielb23451/RangeEvents-API/issues"
+  },
+  "homepage": "https://github.com/Danielb23451/RangeEvents-API#readme"
+}
