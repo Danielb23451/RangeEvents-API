@@ -2,9 +2,9 @@ const axios = require('axios');
 const { APIError, RatelimitError } = require('./errors');
 
 class RequestHandler {
-    constructor(client) {
-        this._client = client;
-        this.baseURL = 'http://localhost:5000'
+    constructor(token) {
+        this._token = token;
+        this.baseURL = 'http://localhost:8000'
     }
 
     async request(endpoint, query = {}, method, body, _attempts = 0) {
@@ -13,7 +13,7 @@ class RequestHandler {
             const options = {
                 validateStatus: null,
                 headers: {
-                    Authorization: this._client.token,
+                    authorization: this._token,
                     "Content-Type": "application/json",
                 },
                 baseURL: this.baseURL,
@@ -25,7 +25,6 @@ class RequestHandler {
             }
             try {
                 axios.request(options).then((res) => {
-                    ++_attempts
                     if (res.status >= 200 && res.status < 300) {
                         resolve(res.data)
                     } else if (res.status === 429) {

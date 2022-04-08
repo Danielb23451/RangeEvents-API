@@ -1,6 +1,6 @@
 {
   "name": "rangeevents-api",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "public package for the public bot \"RangeEvents\". feel free to use",
   "main": "index.js",
   "scripts": {
