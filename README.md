@@ -21,7 +21,7 @@ getCurrnetGiveaways(guildId) - Get curnnet giveaways in server
 const Discord = require("discord.js");
 const client = new Discord.Client({ intents: Object.keys(Discord.Intents.FLAGS) });
 const rea = require("rangeevents-api");
-const rangeevents = new rea.token("TOKEN") // get in https://rangeevents.xyz/api-form;
+const rangeevents = new rea.client("TOKEN") // get in https://rangeevents.xyz/api-form;
 
 
 client.on("ready", () => {
