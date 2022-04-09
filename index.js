@@ -16,7 +16,7 @@ class client {
     }
 
     /**
-     * Get the curnnet giveaways on server
+     * Get the currnet giveaways on server
      *
      * @public
      * @async
@@ -25,7 +25,7 @@ class client {
      * @throws {RatelimitError}
      * @returns {Promise<Giveaways>} return Giveaways
      */
-    async getCurnnetGiveaways(guildId) {
+    async getCurrnetGiveaways(guildId) {
         if (typeof guildId !== "string") throw new TypeError("Please specify a vaild guildId.")
         const data = await this._request(`/api/${guildId}/giveaways/`, {}, "GET")
         return data

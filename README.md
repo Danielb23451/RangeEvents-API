@@ -1,6 +1,6 @@
 # RangeEvents-API
 
-<img src="https://cdn.discordapp.com/avatars/931173019764817930/050bab3f08fe84b1d87922d6d4f89b0d.png" alt="Logo" width="200"/>    
+<img src="https://media.discordapp.net/attachments/900406129593569290/961970512773394492/unknown.png" alt="Logo" width="200"/>    
    
 [![node-current](https://img.shields.io/node/v/rangeevents-api?style=for-the-badge)](https://nodejs.org/en/)
 [![GitHub contributors](https://img.shields.io/github/contributors/Danielb23451/rangeevents-api?style=for-the-badge)](https://github.com/Danielb23451/rangeevents-api/graphs/contributors)
@@ -13,7 +13,7 @@ npm install rangeevents-api
 
 ## Documentation
 
-getCurnnetGiveaways(guildId) - Get curnnet giveaways in server
+getCurrnetGiveaways(guildId) - Get curnnet giveaways in server
 
 
 ## Example
