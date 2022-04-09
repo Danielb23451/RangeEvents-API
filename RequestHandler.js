@@ -24,7 +24,6 @@ class RequestHandler {
             }
             try {
                 axios(options).then((res) => {
-                    console.log(res)
                     if (res.status >= 200 && res.status < 300) {
                         resolve(res.data)
                     } else if (res.status === 429) {
