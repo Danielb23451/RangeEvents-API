@@ -9,11 +9,10 @@ class RequestHandler {
 
     async request(endpoint, query = {}, method, body, _attempts = 0) {
         return new Promise(async (resolve, reject) => {
-            await queue.wait()
             const options = {
                 validateStatus: null,
                 headers: {
-                    authorization: this._token,
+                    "Authorization": this._token,
                     "Content-Type": "application/json",
                 },
                 baseURL: this.baseURL,
@@ -24,7 +23,8 @@ class RequestHandler {
                 timeout: 15000,
             }
             try {
-                axios.request(options).then((res) => {
+                axios(options).then((res) => {
+                    console.log(res)
                     if (res.status >= 200 && res.status < 300) {
                         resolve(res.data)
                     } else if (res.status === 429) {
@@ -33,9 +33,7 @@ class RequestHandler {
                         reject(new APIError(res))
                     }
                 })
-            } finally {
-                queue.shift()
-            }
+            } finally {}
         })
     }
 }

@@ -1,7 +1,7 @@
 const axios = require('axios');
 const RequestHandler = require("./RequestHandler")
 
-class TOKEN {
+class client {
     constructor(token) {
         /**
          *
@@ -11,7 +11,7 @@ class TOKEN {
          */
         if (!token) throw TypeError('Please specify a token.');
         if (typeof token !== "string") throw new TypeError("Please specify a vaild token.")
-        this.requestHandler = new RequestHandler(this)
+        this.requestHandler = new RequestHandler(token)
         this.token = token;
     }
 
@@ -27,7 +27,7 @@ class TOKEN {
      */
     async getCurnnetGiveaways(guildId) {
         if (typeof guildId !== "string") throw new TypeError("Please specify a vaild guildId.")
-        const data = await this._request(`/api/giveaways/${guildId}`, {}, "GET")
+        const data = await this._request(`/api/${guildId}/giveaways/`, {}, "GET")
         return data
     }
 
@@ -41,11 +41,15 @@ class TOKEN {
  * @throws {RatelimitError}
  * @returns {Promise<Giveaways>} return Giveaways
  */
-    async CreateGiveaway(guildId, ) {
+    async CreateGiveaway(guildId) {
         if (typeof guildId !== "string") throw new TypeError("Please specify a vaild guildId.")
-        const data = await this._request(`/api/giveaways/${guildId}`, {}, "POST", { members: userId })
+        const data = await this._request(`/api/giveaways/${guildId}`, {}, "POST")
         return data
+    }
+
+    _request(endpoint, query = {}, method = "GET", body = {}) {
+        return this.requestHandler.request(endpoint, query, method)
     }
 }
 
-module.exports.TOKEN = TOKEN;
+module.exports.client = client;
